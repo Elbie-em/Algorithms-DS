@@ -1,5 +1,5 @@
 # Code from start linked list and node.
-module DS
+module LS
 
   class Node
     attr_accessor :value, :next_node
@@ -33,21 +33,11 @@ module DS
     def remove(index)
       @list.delete_at(index)
     end
+
+    def length
+      @list.length
+    end
   end
 
 end
-
-include DS
-
-list = LinkedList.new
-
-list.add(3)
-list.add(5)
-list.add_at(1, 11)
-list.add_at(0, 13)
-
-puts list.get(2)
-
-
-puts list.get(3)
 

@@ -1,3 +1,8 @@
+require_relative 'linkedlistb.rb'
+
+include DS
+
+
 class Stack
   def push(number)
     
@@ -7,3 +12,4 @@ class Stack
     
   end
 end
+

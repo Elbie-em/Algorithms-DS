@@ -6,3 +6,20 @@ class Node
     @next_node = next_node
   end
 end
+
+class LinkedList
+
+  def initialize
+    @list = Array.new
+    @head = nil
+  end
+
+  def add(number)
+    @head = Node.new(number)
+    @list << @head.value
+  end
+
+  def get(index)
+    @list[index]
+  end
+end

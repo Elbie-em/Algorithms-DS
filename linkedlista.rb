@@ -1,3 +1,4 @@
+# Create Node class
 class Node
   attr_accessor :value, :next_node
   
@@ -7,6 +8,7 @@ class Node
   end
 end
 
+# Create the Linked List class
 class LinkedList
 
   def initialize
@@ -24,6 +26,7 @@ class LinkedList
   end
 end
 
+# Example
 list = LinkedList.new
 
 list.add(3)

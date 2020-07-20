@@ -1,15 +1,21 @@
 require_relative 'linkedlistb.rb'
 
-include DS
+include LS
 
+module Stacky
+  class Stack
 
-class Stack
-  def push(number)
+    def initialize
+      @list = LinkedList.new
+    end
+
+    def push(number)
+      @list.add(number)
+    end
     
-  end
-  
-  def pop
-    
+    def pop
+      @list.remove(@list.length - 1)
+    end
   end
 end
 

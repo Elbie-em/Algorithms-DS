@@ -2,21 +2,29 @@ require_relative 'linkedlistb.rb'
 
 include LS
 
-module QueueModule
-
-  class Queue
-
-    def initialize
+module QM
+	class Queue
+    
+		def initialize
 			@list = LinkedList.new
 		end
-		
-		def add(number)
-			@list.add(number)
+
+		def ps
+			p 'Here'
 		end
-		
+					
+		def add(number)
+			 @list.add(number)
+		end
+						
 		def remove
-			@list.remove(0)
+			if !@list.empty?
+				 @list.remove(0)
+			else
+				 return -1
+			end			
 		end
 	end
-	
 end
+
+  

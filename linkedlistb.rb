@@ -37,6 +37,14 @@ module LS
     def length
       @list.length
     end
+
+    def empty?
+      if @list.count == 0;
+        true
+      else
+        false
+      end
+    end
   end
 
 end

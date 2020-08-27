@@ -8,7 +8,6 @@ stack.push(5)
 
 puts stack.pop
 
-
 stack.push(2)
 stack.push(7)
 puts stack.pop

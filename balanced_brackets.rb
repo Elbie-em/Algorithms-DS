@@ -82,3 +82,26 @@ def is_tween?(sym,twin)
     false
   end
 end
+
+def balanced_brackets?(string)
+  open_sym = ['[','{','('] 
+  close_sym = [']','}',')']
+  stk = Stack.new
+  string.each_char do |c|
+    if open_sym.any?(c)
+      stk.push(c)
+    elsif close_sym.any?(c)
+        if stk.empty? or !is_tween?(stk.top,c)
+          return false
+          break
+        else
+          stk.pop
+        end
+    end
+  end
+  if stk.empty?
+    return true
+  else
+    return false
+  end
+end

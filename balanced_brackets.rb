@@ -43,3 +43,30 @@ class LinkedList
     end
   end
 end
+
+class Stack
+  def initialize
+    @list = LinkedList.new
+  end
+  
+  def top
+    @list.get(@list.length - 1)
+  end
+
+  def push(number)
+    # your code here
+    @list.add(number)
+  end
+  
+  def pop
+    @list.remove(@list.length - 1)
+  end
+
+  def empty?
+    if @list.empty?
+      true
+    else
+      false
+    end
+  end
+end

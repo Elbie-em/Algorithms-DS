@@ -70,3 +70,15 @@ class Stack
     end
   end
 end
+
+def is_tween?(sym,twin)
+  if sym == '[' and twin == ']'
+    true
+  elsif sym == '{' and twin == '}'
+    true
+  elsif sym == '(' and twin == ')'
+    true
+  else
+    false
+  end
+end
